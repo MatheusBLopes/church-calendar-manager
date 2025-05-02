@@ -1,0 +1,23 @@
+{% extends 'global/base.html' %}
+{% block title %}Eventos{% endblock %}
+{% block content %}
+<h2>Eventos</h2>
+<a href="{% url 'calendar_app:create_event' %}" class="btn btn-primary mb-3">Novo Evento</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Título</th><th>Data</th><th>Ministério</th><th>Ocorrido</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for evento in eventos %}
+    <tr>
+      <td>{{ evento.titulo }}</td>
+      <td>{{ evento.data }}</td>
+      <td>{{ evento.ministerio }}</td>
+      <td>{{ evento.ocorreu }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

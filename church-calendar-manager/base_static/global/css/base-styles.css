@@ -1,0 +1,23 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body[data-theme='dark'] {
+    --bs-bg: #343a40;
+    /* Dark background */
+    --bs-color: #f8f9fa;
+    /* Light text color */
+}
+
+body[data-theme='light'] {
+    --bs-bg: #f8f9fa;
+    /* Light background */
+    --bs-color: #343a40;
+    /* Dark text color */
+}
